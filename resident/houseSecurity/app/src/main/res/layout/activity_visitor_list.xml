@@ -1,0 +1,69 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/scanDateListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="fill_horizontal"
+        android:longClickable="false"
+        android:orientation="horizontal" >
+        <!--
+        <ProgressBar
+                android:id="@+id/circular_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:indeterminate="false"
+                android:max="48"
+                android:progress="1"
+                android:progressDrawable="@drawable/circular_progressbar" />
+        -->
+        <TextView
+            android:id="@+id/scanDateListText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#42A5F5"
+            android:linksClickable="true"
+            android:text="Dates" />
+
+        <Spinner
+            android:id="@+id/ScanDateList"
+            android:popupBackground="#42A5F5"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scanDateListLayout"
+        android:id="@+id/listView"
+        android:layout_gravity="left|top" />
+
+</LinearLayout>

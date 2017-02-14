@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_icon.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\notification_icon.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\logo1.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\logo1.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\history.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\history.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\security.jpg",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\security.jpg"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\delete.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\delete.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\edit.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\edit.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_overflow_holo_dark.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\ic_overflow_holo_dark.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_options.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\ic_action_options.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\logo2.jpg",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\logo2.jpg"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\subhahu.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\subhahu.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\refresh.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\refresh.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\drawer_shadow.9.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\drawer_shadow.9.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_drawer.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\ic_drawer.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\house.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\drawable-mdpi\\house.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\search.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\search.png"
+    }
+]

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/history"
+            android:icon="@drawable/ic_history_24dp"
+            android:title="History" />
+        <item
+            android:id="@+id/maps"
+            android:icon="@drawable/map"
+            android:title="Map View" />
+        <item
+            android:id="@+id/configure"
+            android:icon="@drawable/configure"
+            android:title="Configure" />
+
+    </group>
+
+    <item android:title="Actions">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/export"
+                android:icon="@drawable/export"
+                android:title="Export" />
+            <item
+                android:id="@+id/location"
+                android:icon="@drawable/maps"
+                android:title="Location" />
+            <item
+                android:id="@+id/emergency"
+                android:icon="@drawable/emergency"
+                android:title="Emergency Off" />
+            <item
+                android:id="@+id/erase"
+                android:icon="@drawable/delete"
+                android:title="Erase" />
+
+        </menu>
+    </item>
+
+</menu>

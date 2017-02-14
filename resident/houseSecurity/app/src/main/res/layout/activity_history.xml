@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+
+    tools:context="security.house.com.example.Home"
+
+   >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:id="@+id/layout1"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/scanDateListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:orientation="horizontal"
+                android:background="#e6f2ff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/scanDateListText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:text="Dates"
+                    android:textColor="@color/primary_material_dark"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/ScanDateList"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="#42A5F5"
+                    android:backgroundTint="#42A5F5"
+                    android:layout_toEndOf="@+id/scanDateListText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timesVisitLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scanDateListLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:padding="10dp"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/timesVisit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:linksClickable="true"
+                    android:text="Number of Rounds"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/timesVisitList"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:popupBackground="#42A5F5"
+                    android:backgroundTint="#42A5F5"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/timesVisit" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/roundStartTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timesVisitLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:orientation="horizontal"
+                android:background="#e6f2ff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/roundStartTimeText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:linksClickable="true"
+                    android:text="Round Start Time"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/roundStartTimeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:layout_toEndOf="@+id/roundStartTimeText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/roundLastTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/roundStartTimeLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/roundLastTimeText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:layout_centerVertical="true"
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:text="Round End Time" />
+
+                <TextView
+                    android:id="@+id/roundLastTimeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:layout_toEndOf="@+id/roundLastTimeText" />
+
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/roundTypeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roundLastTimeLayout"
+            android:baselineAligned="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="fill_horizontal"
+            android:longClickable="false"
+            android:layout_marginTop="10dp"
+                android:background="#e6f2ff"
+                android:padding="10dp"	    
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/roundTypeText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:textColor="@color/primary_material_dark"
+
+                android:layout_centerVertical="true"
+                android:inputType="none"
+                android:linksClickable="true"
+                android:text="Round Type" />
+
+            <TextView
+                android:id="@+id/roundType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorPrimary"
+                android:inputType="none"
+                android:linksClickable="true"
+                android:layout_toEndOf="@+id/roundTypeText" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/scanCodeListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roundTypeLayout"
+            android:baselineAligned="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="fill_horizontal"
+            android:longClickable="false"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+                android:padding="10dp"
+            >
+
+                <TextView
+                    android:id="@+id/scanCodeListText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:linksClickable="true"
+                    android:text="Locations"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/ScanCodeList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#42A5F5"
+                    android:popupBackground="#42A5F5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/scanCodeListText" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/avgTimeGapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scanCodeListLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="#e6f2ff"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/avgTimeGap"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:linksClickable="true"
+                    android:text="Avg Time Gap" />
+
+                <TextView
+                    android:id="@+id/avgTimeGapText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:layout_marginLeft="10dp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/colorPrimary"
+
+                    android:linksClickable="true"
+                    android:layout_toEndOf="@+id/avgTimeGap" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/maxTimeGapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avgTimeGapLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/maxTimeGap"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:text="Max Time Gap" />
+
+                <TextView
+                    android:id="@+id/maxTimeGapLayoutText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:layout_marginLeft="10dp"
+                    android:focusable="false"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="none"
+                    android:linksClickable="true"
+
+                    android:layout_toEndOf="@+id/maxTimeGap" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/scanWiFiSSIDLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maxTimeGapLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:background="#e6f2ff"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/scanSSID"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:text="SSID" />
+
+                <TextView
+                    android:id="@+id/scanSSIDlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:linksClickable="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_toEndOf="@+id/scanSSID" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/userNameListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scanWiFiSSIDLayout"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="fill_horizontal"
+                android:longClickable="false"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:padding="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/userNameListText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/primary_material_dark"
+
+                    android:linksClickable="true"
+                    android:text="Usernames"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/userNameList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:popupBackground="#42A5F5"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="#42A5F5"
+                    android:layout_toEndOf="@+id/userNameListText" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

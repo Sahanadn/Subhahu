@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\search.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\search.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\delete.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\delete.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\history.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\history.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\refresh.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\refresh.png"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\edit.png",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\edit.png"
+    }
+]

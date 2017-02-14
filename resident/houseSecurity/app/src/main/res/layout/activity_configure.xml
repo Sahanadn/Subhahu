@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#FFFFFF"
+    tools:context=".Configure" >
+
+<ProgressBar
+        android:id="@+id/configure_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		
+		android:padding="10dp"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/configure_login"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+
+			android:orientation="horizontal" >
+
+			<TextView
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:textColor="#42A5F5"
+				android:text="@string/Locations"
+				/>
+
+ 			<Spinner
+                android:id="@+id/ScanLocationList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:popupBackground="#42A5F5"
+                
+                android:layout_toEndOf="@+id/Locations" />
+
+				
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/RulesText"
+				android:layout_width="150dp"
+				android:textColor="#42A5F5"
+				android:layout_height="wrap_content"
+				android:text="@string/Rules"
+				/>
+
+			<Spinner
+                android:id="@+id/ScanRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:popupBackground="#42A5F5"            
+                android:layout_toEndOf="@+id/RulesText" />
+				
+		</LinearLayout>
+
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="20dp"
+			android:orientation="vertical">
+			<Button
+				android:id="@+id/login_create"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/CreateRule"
+				android:background="@drawable/buttonnew"
+				android:onClick="onCreateAccount"
+				android:textStyle="bold" />
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+
+
+<LinearLayout
+            android:id="@+id/configure_emergency_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:padding="10dp"
+	          android:layout_below="@id/configure_login"	            
+            android:orientation="horizontal" >
+
+		<TextView
+		android:layout_width="150dp"
+		android:layout_height="wrap_content"
+			android:textColor="#42A5F5"
+		android:text="@string/EmergencyNum"
+		/>
+		
+		<EditText
+		android:id="@+id/EmergencyNum"
+		android:layout_width="fill_parent"
+
+			android:textColor="#42A5F5"
+		android:layout_height="wrap_content"/>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/emergencyNumberLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="2"
+		>
+
+		<Button
+			android:id="@+id/save_emergency_"
+			style="?android:textAppearanceSmall"
+			android:layout_width="match_parent"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:background="@drawable/buttonnew"
+			android:text="@string/SaveEmergency"
+			android:onClick="onEmergencyNumber"
+			android:textStyle="bold" />
+
+
+		<Button
+			android:id="@+id/reUpload"
+			style="?android:textAppearanceSmall"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:layout_marginTop="20dp"
+			android:text="@string/reupload"
+			android:layout_below="@id/configure_emergency_number_layout"
+			android:onClick="onReupload"
+			android:background="@drawable/buttonnew"
+			android:textStyle="bold"
+			android:theme = "@drawable/buttonnew"/>
+	</LinearLayout>
+
+	<ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_below="@id/emergencyNumberLayout"
+            android:id="@+id/eventsListView"
+            android:layout_gravity="left|top" />
+		
+
+</LinearLayout>
+

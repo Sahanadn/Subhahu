@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="primary_material_dark">#303F9F</color>
+    <color name="teal">#009688</color>
+    <color name="theme_primary">#333333</color>
+    <color name="theme_primary_dark">#191919</color>
+    <color name="theme_primary_light">#E6E6E6</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <string name="CreateRule">Create Rule</string>
+    <string name="EmergencyNum">Emergency Number</string>
+    <string name="Locations">Locations</string>
+    <string name="Password">password</string>
+    <string name="Rules">Rules</string>
+    <string name="SaveEmergency">Save</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Admin</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="app_name">Subhahu</string>
+    <string name="clientName">Apt Name</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="latitude_longitude">%1$.8f, %2$.8f</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_admin">Password</string>
+    <string name="reupload">Reupload</string>
+    <string name="title_activity_admin">Sign in</string>
+    <string name="title_activity_configure">Configure</string>
+    <string name="title_activity_history">Subhahu</string>
+    <string name="title_activity_history_list">HistoryFullList</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_map_view">Map View</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_visitor">Visitor</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <style name="AppTheme" parent="android:Theme.Light">
+
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="android:Theme.Holo.Light.DarkActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="android:Theme.DeviceDefault.Light"/>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item android:id="@+id/Export"       
+          android:title="Export"
+          android:showAsAction="never"
+          />
+        <item android:id="@+id/Erase"     
+        android:showAsAction="never"
+          android:title="Erase" />
+        
+        <item android:id="@+id/ErashForDate"     
+        android:showAsAction="never"
+          android:title="Erase for this Date" />
+        
+        <item android:id="@+id/SyncForDate"     
+        android:showAsAction="never"
+          android:title="Get for this Date" />
+        
+        <item android:id="@+id/SyncFromDate"     
+        android:showAsAction="never"
+          android:title="Get from this Date" />
+</menu>

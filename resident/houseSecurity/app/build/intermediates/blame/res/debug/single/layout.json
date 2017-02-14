@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_page_1.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\main_page_1.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_history_list.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_history_list.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinner_item.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\spinner_item.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_page.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\main_page.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_history.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_history.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\visitor_time.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\visitor_time.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mylist.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\mylist.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_events_list.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_events_list.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_up_round.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\pop_up_round.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_visual_map_view.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_visual_map_view.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\eventlist.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\eventlist.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_configure.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_configure.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_admin.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_admin.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\visitor_calender.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\visitor_calender.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_up_dates.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\pop_up_dates.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_schedule.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\edit_schedule.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\visitor_list_item.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\visitor_list_item.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_visitor.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_visitor.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_up_location.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\pop_up_location.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\notification.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_visitor_list.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_visitor_list.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_up_username.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\layout\\pop_up_username.xml"
+    }
+]

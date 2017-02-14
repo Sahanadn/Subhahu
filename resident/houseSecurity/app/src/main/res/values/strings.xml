@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Subhahu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Admin</string>
+    <string name="title_activity_history">Subhahu</string>
+    <string name="title_activity_map_view">Map View</string>
+    <string name="title_activity_history_list">HistoryFullList</string>
+    <string name="title_activity_configure">Configure</string>
+    <string name="Rules">Rules</string>
+    <string name="Locations">Locations</string>
+    <string name="EmergencyNum">Emergency Number</string>
+    <string name="Password">password</string>
+    <string name="clientName">Apt Name</string>
+    <string name="CreateRule">Create Rule</string>
+    <string name="SaveEmergency">Save</string>
+    <string name="reupload">Reupload</string>
+    <!-- Latitude, longitude format -->
+    <string name="latitude_longitude">%1$.8f, %2$.8f</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_visitor">Visitor</string>
+</resources>

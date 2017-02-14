@@ -1,0 +1,50 @@
+  
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@android:color/white"
+    >
+ 
+
+
+
+<LinearLayout
+        android:id="@+id/scanDateListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:baselineAligned="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="fill_horizontal"
+        android:longClickable="false"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/scanDateListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:linksClickable="true"
+            android:text="Dates" />
+
+        <Spinner
+            android:id="@+id/ScanDateList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+     
+   <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_below="@id/scanDateListLayout"			
+            android:id="@+id/listView"
+            android:layout_gravity="left|top" />
+
+</RelativeLayout>

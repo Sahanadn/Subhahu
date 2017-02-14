@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\vis_list_menu.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\vis_list_menu.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\configure.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\configure.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\global.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\global.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\admin_action.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\admin_action.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\history_list_action.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\history_list_action.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\navigation.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\navigation.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\home.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\home.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\action.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\action.xml"
+    },
+    {
+        "merged": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_home_drawer.xml",
+        "source": "E:\\GIT CODE BASE\\smart_security\\houseSecurity\\app\\src\\main\\res\\menu\\activity_home_drawer.xml"
+    }
+]

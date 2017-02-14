@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigator</title>
+    <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+    <meta charset="utf-8">
+    <style>
+html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+        }
+        .controls {
+        margin-top: 16px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        #pac-input {
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 400px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        }
+        #pac-input:focus {
+        border-color: #4d90fe;
+        margin-left: -1px;
+    padding-left: 14px;  /* Regular padding-left + 1. */
+        width: 401px;
+        }
+        .pac-container {
+        font-family: Roboto;
+        }
+        #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+        }
+        #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+        }
+        #target {
+        width: 345px;
+        }
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+    <script>
+    // Note: This example requires that you consent to location sharing when
+    // prompted by your browser. If you see a blank space instead of the map, this
+    // is probably because you have denied permission for location sharing.
+    var map;
+    var startPosLatLng;
+    var currPosLatLng;
+    var destPosLatLng;
+    var currPosStr;
+    var destPosStr;
+    var markers = [];
+	var polylines = [];
+    var input;
+    var currPosMarker;
+    var infowindow = new google.maps.InfoWindow();
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var geocoder = new google.maps.Geocoder();
+    var dragmarker;
+    var draglatlng;
+
+    function initialize() {
+    // If we want to show trafic enable these  
+    //var trafficLayer = new google.maps.TrafficLayer();
+    //trafficLayer.setMap(map);
+    //setStartingPosOnMap(12.925779, 77.681171);
+    //setSearchDestination();
+
+    startPosLatLng = new google.maps.LatLng(12.971599, 77.594563);
+    var mapOptions = {
+        zoom: 6,
+        center: startPosLatLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scaleControl: true
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    // Create the search box and link it to the UI element.
+    input = /** @type {HTMLInputElement} */ (document.getElementById('pac-input'));
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    onHtmlInitialized();
+    }
+
+    function setStartingPosOnMap(lat, lng) {
+
+//	deleteMarkers();
+    
+    console.log("setStartingPosOnMap: " + lat + "," + lng);
+    startPosLatLng = new google.maps.LatLng(lat, lng);
+    directionsDisplay.setMap(map);
+
+var image = {
+          url: 'icon/security.png',
+          // This marker is 20 pixels wide by 32 pixels high.
+          size: new google.maps.Size(32, 32),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (0, 32).
+          anchor: new google.maps.Point(0, 32)
+        };
+    
+    currPosMarker = new google.maps.Marker({
+        position: startPosLatLng,
+        map: map,
+        icon: image,
+        title: 'You are here..'
+    });
+
+
+    // Create the search box and link it to the UI element.
+    var bounds = new google.maps.LatLngBounds();
+    var radius = 100; //meters
+    var circle = new google.maps.Circle({
+        center: startPosLatLng,
+        radius: radius
+    });
+    bounds = circle.getBounds();
+    //bounds.extend(currPos);
+    //bounds.extend(someplace);
+    console.log("map default bounds - " + bounds);
+    map.fitBounds(bounds);
+
+	markers.push(currPosMarker);
+
+    
+//    setSearchDestination();
+    }
+
+
+	function setCircleOnMap(lat, lng) {
+
+	  startPosLatLng = new google.maps.LatLng(lat, lng);
+	  dragmarker = new google.maps.Marker({
+	    position: startPosLatLng,
+	    map: map,
+	    draggable:false,
+	    });
+        
+	    google.maps.event.addListener(dragmarker, 'dragend', function(marker){
+	        draglatlng = marker.latLng;
+	        updateCurrPosOnMap(draglatlng.lat(), draglatlng.lng());
+	        var point = marker.getPosition();
+	        map.panTo(point);
+	       });
+
+		markers.push(dragmarker);
+	}
+
+	function drawLines(srclat, srclng, destlat, destlng) {
+
+	var flightPlanCoordinates = [
+         {lat: destlat, lng: destlng},
+         {lat: srclat, lng: srclng}
+       ];
+
+        var lineSymbol = {
+          path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+        };
+        
+	var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          icons: [{
+                icon: {path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW},
+                offset: '100%'
+            }]
+        });
+
+        flightPath.setMap(map);
+		markers.push(flightPath);
+
+	}
+
+   function setScanPosOnMap(lat, lng) {
+    console.log("setStartingPosOnMap: " + lat + "," + lng);
+    startPosLatLng = new google.maps.LatLng(lat, lng);
+//    directionsDisplay.setMap(map);
+
+    // Create the search box and link it to the UI element.
+    var bounds = new google.maps.LatLngBounds();
+    var radius = 100; //meters
+    var circle = new google.maps.Circle({
+        center: startPosLatLng,
+        radius: radius
+    });
+    bounds = circle.getBounds();
+    //bounds.extend(currPos);
+    //bounds.extend(someplace);
+    console.log("map default bounds - " + bounds);
+    map.fitBounds(bounds);
+    setSearchDestination();
+    }
+
+
+    function setSearchDestination() {
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        infowindow.close();
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            return;
+        }
+        // If the place has a geometry, then present it on a map.
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        }
+        else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);  // Why 17? Because it looks good.
+        }
+
+        map.setCenter(place.geometry.location);
+        //console.log(place); // take a look at this result object
+        //console.log(place.address_components); // a result has multiple address components
+
+        destPosStr = place.formatted_address; //place.name;
+        //markers.push(marker);
+        console.log("Destination: " + place.geometry.location);
+        destPosLatLng = new google.maps.LatLng(place.geometry.location);
+        directionsDisplay.setMap(map);
+        setDrivingDirections(directionsDisplay, currPosStr, destPosStr);
+    });
+    }
+
+    function setDrivingDirections(directionsDisplay, srcPosStr, destPosStr) {
+    //  src = "RMZ Ecospace, Marathahalli-Sarjapur Outer Ring Rd, Adarsh Palm Retreat, Bellandur, Bengaluru, Karnataka 560103";
+    //  dest = "Marathahalli, Bengaluru, Karnataka";
+    console.log("source - latlong" + startPosLatLng + " name:" + srcPosStr);
+    console.log("destin - latlong" + destPosLatLng + " name:" + destPosStr);
+    var request = {
+        origin: startPosLatLng,
+        destination: destPosStr,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.METRIC,
+        avoidHighways: false,
+        avoidTolls: false
+    };
+    directionsService.route(request, function(response, status) {
+        console.log("directionsService ret: " + status);
+        if (status == google.maps.DirectionsStatus.OK) {
+            var pointsArray = [];
+            console.log("total distance: " + response.routes[0].legs[0].distance.text); //or value
+            console.log("total time: " + response.routes[0].legs[0].duration.text); //or value
+            console.log("steps length: " + response.routes[0].legs[0].steps.length);
+            console.log("instructions: " + response.routes[0].legs[0].steps[0].instructions);
+            var index;
+            for (index = 0; index < response.routes[0].legs[0].steps.length; index++) {
+                console.log("########################################################");
+                console.log("instructions[" + index + "] instructions: " + response.routes[0].legs[0].steps[index].instructions);
+                console.log("instructions[" + index + "] distance:" + response.routes[0].legs[0].steps[index].distance.text + " (" + response.routes[0].legs[0].steps[index].distance.value + ")");
+                console.log("instructions[" + index + "] duration: " + response.routes[0].legs[0].steps[index].duration.text + " (" + response.routes[0].legs[0].steps[index].duration.value + ")");
+                console.log("instructions[" + index + "] start: " + response.routes[0].legs[0].steps[index].start_location);
+                console.log("instructions[" + index + "] end: " + response.routes[0].legs[0].steps[index].end_location);
+                console.log("instructions[" + index + "] path: " + response.routes[0].legs[0].steps[index].path);
+            }
+            directionsDisplay.setDirections(response);
+
+            // Let android start location updates
+            startLocationtUpdates();
+        }
+    });
+    }
+
+	// Deletes all markers in the array by removing references to them.
+	function deleteMarkers() {
+	  //clearMarkers();
+	  var lop = 0;
+	  while (lop < markers.length)
+	  {
+		markers[lop++].setMap(null);
+	  }
+	  markers = [];
+	}
+
+	function clearMarkers() {
+	  setMapOnAll(null);
+	}
+
+    function updateCurrPosOnMap(lat, lng) {
+    //currPosMarker.setMap(null);
+    currPosLatLng = new google.maps.LatLng(lat, lng);
+    currPosMarker.setPosition(currPosLatLng);
+    map.panTo(currPosLatLng);
+    //var point = currPosMarker.getPosition();
+    //map.panTo(point);
+
+currPosMarker = new google.maps.Marker({
+        position: startPosLatLng,
+        map: map,
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            strokeWeight: 2,
+            strokeColor: '#FF9900',
+            scale: 5
+        },
+        title: 'You are here..'
+    });
+
+    dragmarker = new google.maps.Marker({
+    position: startPosLatLng,
+    map: map,
+    draggable:true,
+    });
+        
+    google.maps.event.addListener(dragmarker, 'dragend', function(marker){
+        draglatlng = marker.latLng;
+        updateCurrPosOnMap(draglatlng.lat(), draglatlng.lng());
+        var point = marker.getPosition();
+        map.panTo(point);
+       });
+
+// Create the search box and link it to the UI element.
+    var bounds = new google.maps.LatLngBounds();
+    var radius = 100; //meters
+    var circle = new google.maps.Circle({
+        center: startPosLatLng,
+        radius: radius
+    });
+    bounds = circle.getBounds();
+    //bounds.extend(currPos);
+    //bounds.extend(someplace);
+    console.log("map default bounds - " + bounds);
+    map.fitBounds(bounds);
+
+	markers.push(currPosMarker);
+	
+    //findStepFromCurrLocation();
+    }
+
+
+    function findStepFromCurrLocation() {
+    console.log("currloc - latlong" + currPosLatLng);
+    console.log("destin - latlong" + destPosLatLng + " name:" + destPosStr);
+    var request = {
+        origin: currPosLatLng,
+        destination: destPosStr,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.METRIC,
+        avoidHighways: false,
+        avoidTolls: false
+    };
+    directionsService.route(request, function(response, status) {
+        console.log("directionsService ret: " + status);
+        if (status == google.maps.DirectionsStatus.OK) {
+            console.log("total distance remaining: " + response.routes[0].legs[0].distance.text); //or value
+            console.log("total time remaining: " + response.routes[0].legs[0].duration.text); //or value
+            //console.log("steps length: " + response.routes[0].legs[0].steps.length);
+            //console.log("instructions: " + response.routes[0].legs[0].steps[0].instructions);
+
+            // TBD: use step[0], everything else for testing
+            estimateTurnFromStepInstruction(response.routes[0].legs[0].steps[1].instructions,
+                                            response.routes[0].legs[0].steps[0].distance.value,
+                                            response.routes[0].legs[0].distance.value);
+
+            // TBD: remove. For debugging only - print the first 2 steps in the returned directions
+            var index;
+            for (index = 0; index < 2; index++) {
+                console.log("instructions[" + index + "] instructions: " + response.routes[0].legs[0].steps[index].instructions);
+                console.log("instructions[" + index + "] distance:" + response.routes[0].legs[0].steps[index].distance.text + " (" + response.routes[0].legs[0].steps[index].distance.value + ")");
+                console.log("instructions[" + index + "] duration: " + response.routes[0].legs[0].steps[index].duration.text + " (" + response.routes[0].legs[0].steps[index].duration.value + ")");
+            }
+       }
+    });
+    }
+
+    function estimateTurnFromStepInstruction(instruction, stepdistance, totaldistanceremaining) {
+        console.log("estimateTurnFromStepInstruction: stepdistance:" + stepdistance + " distanceremaining:"+ totaldistanceremaining + " instruction:" + instruction);
+
+        instruction = instruction.replace(/&(lt|gt);/g, function (strMatch, p1){
+            return (p1 == "lt")? "<" : ">";
+        });
+        var cleaninstruction = instruction.replace(/<\/?[^>]+(>|$)/g, "");
+        //console.log("estimateTurnFromStepInstruction: " + cleaninstruction);
+
+        var searchTurnRightStr = "Right";
+        var searchTurnLeftStr = "Left";
+        var searchDestinationStr = "Destination";
+        var speakInstructionsStr = cleaninstruction;
+
+        if ((stepdistance < 200) && (cleaninstruction.toLowerCase().indexOf(searchTurnRightStr.toLowerCase()) > -1)){
+            console.log("estimateTurnFromStepInstruction: TURN RIGHT!!");
+            speakInstructionsStr += " Turning right indicator lights";
+            indicateTurnAhead(2);
+        } else if ((stepdistance < 200) && (cleaninstruction.toLowerCase().indexOf(searchTurnLeftStr.toLowerCase()) > -1)){
+            console.log("estimateTurnFromStepInstruction: TURN LEFT!!");
+            speakInstructionsStr += " Turning left indicator lights";
+            indicateTurnAhead(1);
+        } else if ((totaldistanceremaining < 100)){
+            console.log("estimateTurnFromStepInstruction: DESTINATION REACHED!!");
+            speakInstructionsStr = " Destination reached, shutting down location services";
+            indicateTurnAhead(0);
+            // tell android to stop location updates when destination is reached
+            stopLocationtUpdates();
+        } else {
+            console.log("estimateTurnFromStepInstruction: CONTINUE STRAIGHT!!");
+            indicateTurnAhead(0);
+        }
+        speakInstruction(speakInstructionsStr);
+    }
+
+
+    function showToast(toast) {
+    Android.showToast(toast);
+    }
+
+    function log(msg) {
+    Android.log(msg);
+    }
+
+    function onHtmlInitialized() {
+    Android.onHtmlInitialized();
+    }
+
+    function startLocationtUpdates() {
+    Android.startLocationtUpdates();
+    }
+
+    function stopLocationtUpdates() {
+    Android.stopLocationtUpdates();
+    }
+
+    function indicateTurnAhead(value) {
+    Android.indicateTurnAhead(value);
+    }
+
+    function speakInstruction(instruction) {
+    Android.speakInstruction(instruction);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+</head>
+
+<body>
+        <input class="controls" id="pac-input" placeholder="Search Destination.." type="text">
+
+    <div id="map-canvas"></div>
+</body>
+</html>

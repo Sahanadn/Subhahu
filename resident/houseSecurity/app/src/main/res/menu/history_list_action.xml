@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--
+        <item android:id="@+id/Export"       
+          android:title="Export"
+          android:showAsAction="never"
+          />
+    -->
+    <item android:id="@+id/History"       
+          android:title="History"
+          android:showAsAction="never"
+          />
+
+    <item android:id="@+id/VisualMapView"       
+          android:title="Map View"
+          android:showAsAction="never"
+          /> 
+
+    <item android:id="@+id/Sync"       
+          android:showAsAction="always"
+          android:title="Refresh"
+          android:icon="@drawable/refresh"
+          /> 
+
+    <item android:id="@+id/Attendence"       
+          android:title="Attendence"
+          android:showAsAction="never"
+          /> 
+<!--          
+    <item android:id="@+id/AttendenceList"       
+          android:title="Attendence History"
+          android:showAsAction="never"
+          /> 
+          
+    <item android:id="@+id/Configure"     
+        android:showAsAction="never"
+          android:title="Configure" />
+
+    <item android:id="@+id/Emergency"     
+        android:showAsAction="never"
+          android:title="Emergency Off" />
+
+        <item android:id="@+id/Events"     
+        android:showAsAction="never"
+          android:title="Events" />
+	-->
+
+    <item android:id="@+id/Share"     
+        android:showAsAction="never"
+          android:title="Share" />
+
+    
+        <item android:id="@+id/Erase"     
+        android:showAsAction="never"
+          android:title="Erase" />
+
+
+    <item android:id="@+id/Visitor"
+        android:showAsAction="never"
+        android:title="Schedule Visitor" />
+
+    <item android:id="@+id/Visitor_list"
+        android:showAsAction="never"
+        android:title="Visitor List" />
+
+        <item android:id="@+id/Logout"     
+        android:showAsAction="never"
+          android:title="Logout" />
+
+    <item android:id="@+id/AboutUs"
+        android:showAsAction="never"
+        android:title="About Us" />
+
+</menu>
